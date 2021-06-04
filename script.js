@@ -16,6 +16,8 @@ resetButton.addEventListener("click", gameReset);
 init();
 
 // Functions
+
+// Initializes the game
 function init() {
     for (var i = 0; i < diffButton.length; i++) {
         diffButton[i].addEventListener("click",setupButton);
@@ -23,6 +25,7 @@ function init() {
     setupSquares(); 
 }
 
+// Setups the squares accordingly to the game selection
 function setupButton() {
     for(var i = 0; i < diffButton.length; i++) {
         diffButton[i].classList.remove("selected");
@@ -52,6 +55,8 @@ function setupSquares() {
     } 
 }
 
+// These will work to randomize the colors
+
 function changeColors(color1) {
     for(var i = 0; i < squares.length; i++) {
         squares[i].style.backgroundColor = color1;
@@ -80,6 +85,8 @@ function generateRandomColors(length) {
     }
     return colors;
 }
+
+// Performs the Reset
 
 function gameReset() {
     colors = generateRandomColors(numberOfSquares);
